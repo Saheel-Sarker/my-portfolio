@@ -4,6 +4,7 @@ import "./index.css";
 import pizzamenu from "./pizza-menu.png";
 import eatnsplit from "./eat-n-split.png";
 import usepopcorn from "./use-popcorn.png";
+import preview from "./preview.png";
 
 export default function App() {
   const [color, setColor] = useState(false);
@@ -54,10 +55,11 @@ function Header() {
     <section className="header">
       <div className="headerContent">
         <h1 className="title">
-          Hi, I'm Saheel Sarker
+          Hi, I'm <span className="title-name">Saheel Sarker</span>
         </h1>
+        <p className="subtitle">(👨🏻‍💻Developer + 🚀Entrepreneur)</p>
         <p className="about-me">
-          I'm an entrepreneur and a passionate web developer with experience in
+          I'm an entrepreneur and a passionate developer with experience in
           creating responsive and user-friendly web applications. I specialize
           in React.js and enjoy turning complex problems into simple, beautiful,
           and intuitive designs. 
@@ -110,7 +112,7 @@ function Skills() {
       <h2 className="sectionTitle" id="skills" tabIndex={-1}>
         Skills
       </h2>
-      <div className="skills">
+      <div className="skillsGrid">
         {skills.map((skill, index) => (
           <SkillCard key={index} skill={skill} />
         ))}
@@ -308,12 +310,12 @@ const skills = [
 const projects = [
   {
     id: 1,
-    title: "Use-Popcorn",
-    image: usepopcorn,
-    technologies: ["HTML", "CSS", "JavaScript", "React.js", "GitHub"],
-    description: "Movies app built with React.js that utilizes OMDb API",
-    link: "https://vasudevsoni.github.io/use-popcorn",
-    github: "https://github.com/vasudevsoni/use-popcorn",
+    title: "Seqr Safe",
+    image: preview,
+    technologies: ["Next.js", "Express.js", "MongoDB", "Node.js", "Tailwindcss", "Stripe", "Jwt", "Bcrypt", "Crypto.js", "MailTrap","GitHub"],
+    description: "A SaaS app to keep your important credentials, including passwords and credit card information, safe and secure",
+    link: "https://seqr-safe.com/",
+    github: "https://github.com/Saheel-Sarker/Keep-Safe",
     features: [
       { text: "Dynamic Web App", emoji: "🪄" },
       { text: "API Data Fetching", emoji: "⚡" },
@@ -322,13 +324,13 @@ const projects = [
   },
   {
     id: 2,
-    title: "Eat-n-Split",
+    title: "ExpenseApp",
     image: eatnsplit,
-    technologies: ["HTML", "CSS", "JavaScript", "React.js", "GitHub"],
+    technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "C#", ".NET", "ML.NET", "d3.js", "MS SQL Server", "Azure"],
     description:
-      "Split your bills/expenses among friends and keep track of balance",
-    link: "https://vasudevsoni.github.io/eat-n-split",
-    github: "https://github.com/vasudevsoni/eat-n-split",
+      "A web app to track your finances, analyze your spending habits, and forecast your future finances",
+    link: "",
+    github: "https://github.com/Saheel-Sarker/ExpenseApp-Front-End-Deployment-",
     features: [
       { text: "Dynamic Web App", emoji: "🪄" },
       { text: "Aethetic UI", emoji: "😍" },
@@ -337,10 +339,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "Pizza Menu",
+    title: "Your Scribe",
     image: pizzamenu,
-    technologies: ["HTML", "CSS", "JavaScript", "React.js", "GitHub"],
-    description: "An online menu home page for a Pizza restaurant",
+    technologies: ["HTML", "Tailwind", "JavaScript", "React.js", "Node.js", "Xenova", "Github"],
+    description: "A web app to transcribe and translate your voice and audio files using AI",
     link: "https://vasudevsoni.github.io/pizza-menu/",
     github: "https://github.com/vasudevsoni/pizza-menu",
     features: [

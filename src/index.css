@@ -102,6 +102,9 @@ html:focus-within {
   overflow: hidden;
   z-index: 1000;
   transition: all 213ms ease;
+  font-size: x-large;
+  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .navbar-bg {
@@ -118,7 +121,7 @@ html:focus-within {
   text-decoration: none;
   color: #fff;
   display: block;
-  font-size: 1.1rem;
+  font-size: 30px;
   font-weight: 400;
   transition: all 213ms ease;
 }
@@ -136,25 +139,20 @@ html:focus-within {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 50px;
+  text-align: left;
 }
 
-.skills {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-@media only screen and (max-width: 640px) {
-  .skills {
-    justify-content: center;
-  }
+.skillsGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  justify-content: center;
+  gap: 30px;
 }
 
 .skillCard {
   width: 75px;
   height: 75px;
-  padding: 15px;
+  padding: 10px;
   border-radius: 7px;
   object-fit: contain;
   transition: all 213ms ease;
@@ -171,8 +169,17 @@ html:focus-within {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.75);
 }
 
+@media only screen and (max-width: 640px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 20px;
+  }
+}
+
 .projectGrid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
 }
 
@@ -186,6 +193,7 @@ html:focus-within {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
 }
 
 .card:hover {
