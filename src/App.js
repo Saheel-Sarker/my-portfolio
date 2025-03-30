@@ -37,6 +37,9 @@ function Navbar({ color }) {
   return (
     <nav className={color ? "navbar navbar-bg" : "navbar"}>
       <p>
+        <a href="#">About</a>
+      </p>
+      <p>
         <a href="#skills">Skills</a>
       </p>
       <p>
@@ -48,17 +51,18 @@ function Navbar({ color }) {
 
 function Header() {
   return (
-    <header className="header">
+    <section className="header">
       <div className="headerContent">
         <h1 className="title">
-          Hi, I'm <span className="title-name">Vasudev Soni</span>
+          Hi, I'm Saheel Sarker
         </h1>
-        <p className="subtitle">(👨🏻‍💻Web Developer + 🚀Entrepreneur)</p>
         <p className="about-me">
           I'm an entrepreneur and a passionate web developer with experience in
           creating responsive and user-friendly web applications. I specialize
           in React.js and enjoy turning complex problems into simple, beautiful,
-          and intuitive designs. <br />
+          and intuitive designs. 
+        </p>
+        <p className="about-me">
           As an entrepreneur, I thrive on identifying unique challenges and
           building innovative, scalable solutions. My ventures include
           developing apps and platforms that address real-world problems,
@@ -69,7 +73,7 @@ function Header() {
           <a
             data-tooltip="Email"
             data-flow="bottom"
-            href="mailto:vasudevsoni2001@gmail.com"
+            href="mailto:saheel@ualberta.ca"
             className="iconLink"
           >
             <Mail size={24} />
@@ -77,7 +81,7 @@ function Header() {
           <a
             data-tooltip="LinkedIn"
             data-flow="bottom"
-            href="https://www.linkedin.com/in/vasudevsoni"
+            href="https://www.linkedin.com/in/saheels"
             target="_blank"
             rel="noopener noreferrer"
             className="iconLink"
@@ -87,7 +91,7 @@ function Header() {
           <a
             data-tooltip="GitHub"
             data-flow="bottom"
-            href="https://github.com/vasudevsoni"
+            href="https://github.com/Saheel-Sarker"
             target="_blank"
             rel="noopener noreferrer"
             className="iconLink"
@@ -96,7 +100,7 @@ function Header() {
           </a>
         </div>
       </div>
-    </header>
+    </section>
   );
 }
 
@@ -117,7 +121,7 @@ function Skills() {
 
 function SkillCard({ skill }) {
   return (
-    <div data-tooltip={skill.title} data-flow="bottom">
+    <div data-tooltip={skill.title} data-flow="bottom" className="hoverCard">
       <img
         className="skillCard"
         src={skill.image}
@@ -158,13 +162,13 @@ function ProjectCard({ project }) {
         <p className="cardTech">
           Technologies: {project.technologies.join(", ")}
         </p>
-        <ul className="featureList">
+        {/* <ul className="featureList">
           {project.features.map((feature, index) => (
             <li key={index} className="featureItem">
               {feature.emoji} {feature.text}
             </li>
           ))}
-        </ul>
+        </ul> */}
         <div className="buttons">
           <a
             href={project.link}
@@ -192,10 +196,7 @@ function Footer() {
   return (
     <section className="section">
       <p className="about-me">
-        Thank you for checking out my portfolio.{" "}
-        <span data-tooltip="Have a good day!" data-flow="bottom">
-          😀
-        </span>
+        Thank you for checking out my portfolio! If you have any questions or would like to connect, feel free to reach out via email or connect with me on LinkedIn or GitHub. I'm always open to new opportunities and collaborations.
       </p>
     </section>
   );
@@ -203,53 +204,104 @@ function Footer() {
 
 const skills = [
   {
-    title: " HTML",
-    image:
-      "https://cdn.iconscout.com/icon/free/png-256/free-html-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944937.png",
+    title: "JavaScript",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png",
+  },
+  {
+    title: "TypeScript",
+    image: "https://www.svgrepo.com/show/303600/typescript-logo.svg",
+  },
+  {
+    title: "HTML",
+    image: "https://cdn.iconscout.com/icon/free/png-256/free-html-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944937.png",
   },
   {
     title: "CSS",
-    image:
-      "https://cdn.iconscout.com/icon/free/png-256/free-css-logo-icon-download-in-svg-png-gif-file-formats--logos-pack-icons-722685.png",
-  },
-
-  {
-    title: "JavaScript",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png",
+    image: "https://cdn.iconscout.com/icon/free/png-256/free-css-logo-icon-download-in-svg-png-gif-file-formats--logos-pack-icons-722685.png",
   },
   {
-    title: "React.js",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
-  },
-  {
-    title: "React Router",
-    image: "https://www.svgrepo.com/show/354262/react-router.svg",
-  },
-  {
-    title: "BootStrap",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png",
+    title: "SQL",
+    image: "https://www.svgrepo.com/show/341068/sql.svg",
   },
   {
     title: "Python",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg",
   },
   {
-    title: "Flutter",
-    image:
-      "https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png",
+    title: "Java",
+    image: "https://www.svgrepo.com/show/184143/java.svg",
+  },
+  {
+    title: "C#",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+  },
+  {
+    title: "C",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
+  },
+  {
+    title: "MATLAB",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png",
+  },
+  {
+    title: ".NET",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg",
+  },
+  {
+    title: "Angular",
+    image: "https://www.svgrepo.com/show/452156/angular.svg",
+  },
+  {
+    title: "React.js",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+  },
+  {
+    title: "Next.js",
+    image: "https://www.svgrepo.com/show/378440/nextjs-fill.svg",
+  },
+  {
+    title: "Node.js",
+    image: "https://www.svgrepo.com/show/355140/node.svg",
+  },
+  {
+    title: "Express.js",
+    image: "https://www.svgrepo.com/show/330398/express.svg",
+  },
+  {
+    title: "Android SDK",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg",
+  },
+  {
+    title: "MongoDB",
+    image: "https://www.svgrepo.com/show/331488/mongodb.svg",
+  },
+  {
+    title: "PostgreSQL",
+    image: "https://www.svgrepo.com/show/354200/postgresql.svg",
   },
   {
     title: "Firebase",
     image: "https://brandeps.com/logo-download/F/Firebase-logo-02.png",
   },
   {
-    title: "GitHub",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png",
+    title: "MS SQL",
+    image: "https://upload.wikimedia.org/wikipedia/en/f/fa/MSSQLS_icon.svg",
+  },
+  {
+    title: "AWS",
+    image: "https://www.svgrepo.com/show/448266/aws.svg",
+  },
+  {
+    title: "Microsoft Azure",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg",
+  },
+  {
+    title: "Git",
+    image: "https://www.svgrepo.com/show/373623/git.svg",
+  },
+  {
+    title: "Terraform",
+    image: "https://www.svgrepo.com/show/354447/terraform-icon.svg",
   },
 ];
 
