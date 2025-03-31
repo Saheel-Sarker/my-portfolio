@@ -3,7 +3,6 @@ import { Mail, Linkedin, Github } from "lucide-react";
 import "./index.css";
 import pizzamenu from "./pizza-menu.png";
 import eatnsplit from "./eat-n-split.png";
-import usepopcorn from "./use-popcorn.png";
 import preview from "./preview.png";
 
 export default function App() {
@@ -28,6 +27,7 @@ export default function App() {
         <Header />
         <Skills />
         <Projects />
+        <Experience />
         <Footer />
       </div>
     </div>
@@ -108,7 +108,7 @@ function Header() {
 
 function Skills() {
   return (
-    <section className="section">
+    <section className="section2">
       <h2 className="sectionTitle" id="skills" tabIndex={-1}>
         Skills
       </h2>
@@ -136,7 +136,7 @@ function SkillCard({ skill }) {
 
 function Projects() {
   return (
-    <section className="section">
+    <section className="section3">
       <h2 className="sectionTitle" id="projects" tabIndex={-1}>
         Projects
       </h2>
@@ -191,6 +191,26 @@ function ProjectCard({ project }) {
         </div>
       </div>
     </div>
+  );
+}
+
+function Experience() {
+  return (
+    <section className="section">
+      <h2 className="sectionTitle">Experience</h2>
+      <div className="experienceGrid">
+        <div className="experienceCard">
+          <h3 className="experienceTitle">Software Engineer Intern</h3>
+          <p className="experienceCompany">XYZ Company</p>
+          <p className="experienceDuration">June 2022 - August 2022</p>
+          <ul className="experienceList">
+            <li>Developed a web application using React.js and Node.js.</li>
+            <li>Collaborated with a team of developers to implement new features.</li>
+            <li>Participated in code reviews and contributed to the overall code quality.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 }
 
